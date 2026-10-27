@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeFlow | Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <a class="logo" href="#">Type<span>Flow</span><i>.</i></a>
+      <button id="themeBtn" class="theme-btn">☀ / ☾</button>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL TYPING LAB</p>
+      <h1>Test your <span>typing speed.</span></h1>
+      <p class="subtitle">Focus on accuracy. Build your speed. Beat your best.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span>WPM</span>
+        <strong id="wpm">0</strong>
+        <small>Words per minute</small>
+      </div>
+      <div class="stat">
+        <span>ACCURACY</span>
+        <strong id="accuracy">100%</strong>
+        <small>Correct characters</small>
+      </div>
+      <div class="stat">
+        <span>TIME LEFT</span>
+        <strong id="time">30</strong>
+        <small>Seconds remaining</small>
+      </div>
+      <div class="stat">
+        <span>ERRORS</span>
+        <strong id="errors">0</strong>
+        <small>Incorrect characters</small>
+      </div>
+    </section>
+
+    <section class="test-card">
+      <div class="controls">
+        <div class="control">
+          <label for="duration">DURATION</label>
+          <select id="duration">
+            <option value="15">15 seconds</option>
+            <option value="30" selected>30 seconds</option>
+            <option value="60">60 seconds</option>
+            <option value="120">120 seconds</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="difficulty">DIFFICULTY</label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <button id="restart" class="reset-btn">↻ Restart</button>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress" class="progress"></div>
+      </div>
+
+      <div id="passage" class="passage" aria-label="Text to type"></div>
+
+      <textarea
+        id="input"
+        placeholder="Click here and start typing..."
+        aria-label="Type the displayed passage here"
+        spellcheck="false"
+        autocapitalize="off"
+        autocomplete="off"
+      ></textarea>
+
+      <div class="test-footer">
+        <span id="status">Ready when you are</span>
+        <span>Press <kbd>Tab</kbd> + <kbd>Enter</kbd> to restart</span>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <p class="eyebrow">TEST COMPLETED</p>
+      <h2>Your results are in!</h2>
+      <div class="result-grid">
+        <div><span>Final WPM</span><strong id="finalWpm">0</strong></div>
+        <div><span>Accuracy</span><strong id="finalAccuracy">100%</strong></div>
+        <div><span>Total errors</span><strong id="finalErrors">0</strong></div>
+      </div>
+      <p id="message"></p>
+      <button id="again" class="primary-btn">Try Again →</button>
+    </section>
+
+    <footer class="footer">
+      <span>TypeFlow © 2026</span>
+      <span>Practice a little. Improve every day.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
